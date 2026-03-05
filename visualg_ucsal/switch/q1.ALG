@@ -1,8 +1,8 @@
-Algoritmo "semnome"
+Algoritmo "clientes"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Arthur Henrique Kronbauer 
 // Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
+// Autor(a)    : Gabriel S. Olavo
 // Data atual  : 28/02/2026
 Var
 // Seção de Declarações das variáveis 
@@ -26,20 +26,21 @@ leia(valorCompra)
 escolha codigoComprador
    caso "1"
       desconto <- 10
-      valorFinal <- (valorCompra * desconto) / 100
+      valorFinal <- valorCompra -((valorCompra * desconto) / 100)
    caso "2"
       desconto <- 5
-      valorFinal <- (valorCompra * desconto) / 100
+      valorFinal <- valorCompra -((valorCompra * desconto) / 100)
    caso "3"
       valorFinal <- valorCompra
    outrocaso
-      escreval("Valores inválidos!")
+     escreval("Valores inválidos!")
 fimescolha
 
-//limpatela
-se codigoComprador = "1" ou  codigoComprador = "2" entao
+limpatela
+se (codigoComprador = "1") ou (codigoComprador = "2") entao
    escreval("Valor da compra:", valorCompra)
    escreval("Valor da final:", valorFinal)
+   escreval("Desconto aplicado:", desconto,"%")
 fimse
 
 fimalgoritmo
